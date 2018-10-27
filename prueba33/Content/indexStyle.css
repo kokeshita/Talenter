@@ -1,0 +1,57 @@
+﻿nav{
+    background: #7698b3;
+}
+
+p{
+    font-size:20px;
+    color:black;
+}
+
+.tit {
+    
+    color: black;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+.roundBox {
+    padding: 20px;
+    background: rgba( 240,248,255, 0.8);
+    border-radius: 5px;
+}
+.talenter-welcome {
+    padding:20px;
+    width: 100%;
+    height: 500px;
+    background-image: url(images/bienvenida.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.talenter-empresa {
+    padding: 20px;
+    width: 100%;
+    height: 500px;
+    background-image: url(images/empresa.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.talenter-talent {
+    padding: 20px;
+    width: 100%;
+    height: 500px;
+    background-image: url(images/talento.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+#register{
+    color:grey;
+}

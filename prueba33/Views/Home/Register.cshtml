@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Registro</title>
+    <link href="~/Content/registerStyle.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="/Scripts/jquery-3.3.1.js"></script>
+    <script src="/Scripts/jquery.mask.js"></script>
+    <script src="/Scripts/scripts.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="container-title">
+            <div class="row h-100 justify-content-center align-items-center">
+                <h1 class="col-sm-12 text-white" style="        text-align: center">Registro</h1>
+            </div>
+        </div>
+        <div class="container-form">
+            <div class="row h-100 justify-content-center align-items-center">
+                <form onsubmit="return validar();">
+                    <div class="roundBox">
+                        <div id="alert" class="alert alert-danger" role="alert" style="        display: none"></div>
+                        <div class="form-group col-sm-12">
+                            <label for="nombre">Nombre</label>
+                            <input class="form-control input-field" id="nombre" type="text" placeholder="Ingrese su nombre">
+                            <label for="apellido">Apellido</label>
+                            <input class="form-control input-field" id="apellido" type="text" placeholder="Ingrese su apellido">
+                            <label for="dni">DNI</label>
+                            <input class="form-control input-field" id="dni" type="number" max="50000000" placeholder="Ingrese su dni" value="0">
+                            <div class="form-group">
+                                <label for="prov">Provincia</label>
+                                <select onchange="displayBarrio()" class="custom-select" id="prov">
+                                    <option value="">Seleccione una provincia</option>
+                                    <option value="0">Buenos Aires</option>
+                                    <option value="1">Ciudad de Buenos Aires</option>
+                                    <option value="2">Cordoba</option>
+                                    <option value="3">Entre Rios</option>
+                                    <option value="4">Mendoza</option>
+                                </select>
+                            </div>
+                            <div class="form-group" style="        display: none" id="barrioForm">
+                                <label for="barrio">Barrio</label>
+                                <select class="custom-select" id="barrio">
+                                    <option value="">Seleccione un barrio</option>
+                                    <option value="0">Palermo</option>
+                                    <option value="1">Montserrat</option>
+                                    <option value="2">Balvanera</option>
+                                    <option value="3">Belgrano</option>
+                                    <option value="4">San Telmo</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input class="form-control input-field" id="email" type="email" placeholder="Ingrese su email" />
+                                <label for="pass">Contrasenia</label>
+                                <input class="form-control input-field" id="pass" type="password" placeholder="Ingrese su contrasenia" />
+                            </div>
+                            <div class="form-group">
+                                <div class="form-group form-check">
+                                    <input type="checkbox" class="form-check-input" id="terms">
+                                    <button type="button" class="btn btn-link" data-toggle="modal" data-target="#modalTerms" style="        color: #EAF1F1">
+                                        Acepto terminos y condiciones
+                                    </button>
+                                    <div class="modal fade" id="modalTerms" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLongTitle">Terminos y condiciones</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                                                    <button onclick="acepto();" type="button" class="btn btn-primary" data-dismiss="modal">Acepto</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" class="form-control btn btn-primary" id="btRegister">Registro</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

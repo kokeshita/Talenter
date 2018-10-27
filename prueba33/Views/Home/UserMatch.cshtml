@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link href="~/Content/userMatchStyle.css" rel="stylesheet" />
+    <script src="/Scripts/userMatchScripts.js"></script>
+</head>
+<body>
+
+    <div class="row justify-content-md-center">
+        <nav class="navbar fixed-top navbar-light">
+            <a class="navbar-brand" href="#">Talenter</a>
+            <form class="form-inline">
+                <label class="mr-sm-2">Adrian Iglesia</label>
+                <a href="#">
+                    <img src="/Content/images/yo.jpg" width="50" height="50" class="d-inline-block align-right mr-sm-2 " alt="user">
+                </a>
+                <button onclick="openNav()" id="btnOpen" class="btn btn-outline-light mr-sm-2" type="button">&#9776</button>
+                <button onclick="closeNav()" id="btnClose" class="btn btn-outline-danger mr-sm-2" type="button" style="        display: none">&times;</button>
+            </form>
+        </nav>
+
+        <div class="container" >
+            <div class="main" style="        margin-top: 100px">
+                <div id="mySideBar" class="sidenav ">
+                    <div>
+                        <h2>Talenter</h2>
+                        <div class="sub-title"><h4>Cuenta</h4></div>
+                        <a href="#">Configuracion Personal</a>
+                        <a href="#">Privacidad</a>
+                        <a href="#">Idioma</a>
+                        <div class="sub-title"><h4>Talento</h4></div>
+                        <a href="#">Filtros</a>
+                        <a href="#">Historial</a>
+                        <a href="#" style="        color: red">Salir</a>
+                    </div>
+                </div>
+                <div class="hello-user" onclick="closeNav()">
+                    <div class="hello-text col-xs-12 text-center">
+                        <h1>Hola Adrian</h1>
+                    </div>
+                    <div class="hello-img text-center">
+                        <img src="/Content/images/yo.jpg" width="300" height="300" alt="user">
+                    </div>
+                    <div class="hello-btn col-xs-12 text-center">
+                        <button class="btn btn-primary btn-lg">Hay Talento!</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
