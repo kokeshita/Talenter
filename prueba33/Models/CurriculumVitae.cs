@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 namespace prueba33.Models
 {
     public class CurriculumVitae
